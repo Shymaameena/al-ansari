@@ -3,7 +3,7 @@ import MachineryCards from "./machinery-cards";
 
 export default function Services() {
   return (
-    <Bounded className="flex flex-col py-24">
+    <Bounded className="flex md:flex-col py-24 justify-center">
       <div className="">
         <p className="text-lg text-primary rounded-3xl bg-[#fff0e6] mx-auto w-fit px-4 font-medium ">
           Fleets on Rental

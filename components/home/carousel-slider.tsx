@@ -29,7 +29,7 @@ export default function CarouselSlider() {
               />
               <div className="absolute inset-0 flex  justify-center items-center">
                 <div className="flex flex-col justify-center gap-10  ">
-                  <p className="font-black text-6xl  max-w-2xl text-center px-0 inset-0 w-full capitalize">
+                  <p className="font-black text-4xl md:text-6xl  max-w-2xl text-center px-0 inset-0 w-full capitalize">
                     {item.carouselText}
                   </p>
                   <Button className="w-fit mx-auto">
