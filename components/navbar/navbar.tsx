@@ -20,7 +20,7 @@ export default function ResponsiveNavbar() {
     <div className="">
       <div className="fixed z-50 w-full">
         <NavbarHeaderWrapper>
-          <div className="flex items-center justify-between border-b border-muted-foreground px-4 py-2 font-thin text-sm tracking-wide text-muted md:px-8 lg:px-20">
+          <div className="flex items-center  justify-between border-b border-muted-foreground px-4 py-2 font-thin text-sm tracking-wide text-muted md:px-8 lg:px-20">
             <div className="flex items-center gap-2.5">
               <MailIcon className="" strokeWidth={1} size={16} />
               <span className="hidden sm:inline">info@ansarigroup.co</span>
