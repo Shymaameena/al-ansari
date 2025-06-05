@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import logo from "@/public/images/logo2.png";
+import logo from "@/public/images/logo.png";
 import Image from "next/image";
 
 export default function Logo({ className }: { className?: string }) {

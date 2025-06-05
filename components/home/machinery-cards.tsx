@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 export default function MachineryCards() {
   return (
     <div className="flex gap-3">
-      {machineryCards.map(({ alt, href, image, title }, index) => {
+      {machineryCards.map(({ alt, image, title }, index) => {
         return (
           <Card
             key={`${index}`}

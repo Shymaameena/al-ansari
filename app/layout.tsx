@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Saira } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer";
+import { NavbarProvider } from "@/hooks/navbar-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +17,8 @@ const geistMono = Geist_Mono({
 
 const saira = Saira({
   variable: "--font-saira",
-  subsets: ['latin']
-})
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,13 +31,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${saira.className} antialiased`}
       >
-        <Navbar/>
-        {children}
-        <Footer/>
+        <NavbarProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </NavbarProvider>
       </body>
     </html>
   );

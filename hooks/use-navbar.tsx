@@ -1,29 +1,45 @@
-import { useEffect, useState } from "react";
+// "use client";
+// import { useEffect, useState } from "react";
 
-export const useNavbar = () => {
-  const [showTopBar, setShowTopBar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+// export function useNavbar() {
+//   const [showTopBar, setShowTopBar] = useState(true);
+//   const [isScrolled, setIsScrolled] = useState(false);
+//   const [lastScrollY, setLastScrollY] = useState(0);
+//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+//   console.log(isMobileMenuOpen);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        // scrolling down
-        setShowTopBar(false);
-      } else {
-        // scrolling up
-        setShowTopBar(true);
-      }
+//       // Determine if page is scrolled at all
+//       setIsScrolled(currentScrollY > 10);
 
-      setLastScrollY(currentScrollY);
-    };
+//       // Hide top bar when scrolling down, show when scrolling up
+//       if (currentScrollY > lastScrollY && currentScrollY > 50) {
+//         // scrolling down
+//         setShowTopBar(false);
+//       } else if (currentScrollY < lastScrollY || currentScrollY < 10) {
+//         // scrolling up or at top
+//         setShowTopBar(true);
+//       }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+//       setLastScrollY(currentScrollY);
+//     };
 
-  return {
-    showTopBar,
-  };
-};
+//     window.addEventListener("scroll", handleScroll, { passive: true });
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, [lastScrollY]);
+
+//   const toggleMobileMenu = () => {
+//     setIsMobileMenuOpen(!isMobileMenuOpen);
+//   };
+
+//   return {
+//     showTopBar,
+//     isScrolled,
+//     isMobileMenuOpen,
+//     toggleMobileMenu,
+//     closeMobileMenu: () => setIsMobileMenuOpen(false),
+//   };
+// }

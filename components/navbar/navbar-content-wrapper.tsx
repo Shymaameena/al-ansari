@@ -1,5 +1,5 @@
 "use client";
-import { useNavbar } from "@/hooks/use-navbar";
+import { useNavbar } from "@/hooks/navbar-context";
 import { cn } from "@/lib/utils";
 
 export default function NavBarContentWrapper({
