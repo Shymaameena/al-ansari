@@ -9,7 +9,7 @@ export default function Home() {
       <CarouselSlider />
       <Services />
       <Projects/>
-      <ClientLogos/>
+      <ClientLogos/> 
     </div>
   );
 }
