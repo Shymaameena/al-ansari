@@ -9,6 +9,7 @@
     "lint": "next lint --fix"
   },
   "dependencies": {
+    "@next/third-parties": "^15.3.3",
     "@radix-ui/react-slot": "^1.2.3",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.49.9",
@@ -16,6 +17,7 @@
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.9.7",
+    "google": "link:@next/third-parties/google",
     "gsap": "^3.13.0",
     "lucide-react": "^0.507.0",
     "next": "15.3.1",
