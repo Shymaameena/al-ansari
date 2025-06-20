@@ -9,7 +9,7 @@ import MobileMenu from "./mobile-menu";
 export type TNavItems = typeof navItems
 const navItems = [
   { dropDownItems: [], dropDown: false, href: "/", label: "Home" },
-  { dropDownItems: [], dropDown: false, href: "/about", label: "About" },
+  { dropDownItems: [], dropDown: false, href: "/about", label: "About Us" },
   { dropDownItems: [], dropDown: false, href: "/services", label: "Services" },
   {
     dropDownItems: [
@@ -22,7 +22,7 @@ const navItems = [
     href: "",
     label: "Our Fleet",
   },
-  { dropDownItems: [], dropDown: false, href: "/contact", label: "Contact" },
+  { dropDownItems: [], dropDown: false, href: "/contact", label: "Contact Us" },
 ];
 
 export default function ResponsiveNavbar() {
@@ -68,7 +68,7 @@ export default function ResponsiveNavbar() {
             <Logo />
 
             {/* Desktop Navigation */}
-            <ul className="hidden font-bold text-[16px] md:flex md:gap-4 lg:gap-8">
+            <ul className="hidden  text-[16px] md:flex md:gap-4 lg:gap-8">
               {navItems.map((item, index) => {
                 return (
                   <li

@@ -60,7 +60,7 @@
   --accent-foreground: oklch(79.63% 0.212 80.23);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
+  --input: oklch(1 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -147,4 +147,12 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
+}
+
+.heading {
+  @apply text-4xl font-bold tracking-wider 
+}
+
+.heading-sm {
+  @apply text-xl font-bold tracking-tighter text-secondary
 }

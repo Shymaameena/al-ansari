@@ -1,3 +1,4 @@
+"use client";
 import {
   Carousel,
   CarouselContent,
@@ -5,6 +6,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { delay } from "framer-motion";
 import Image from "next/image";
 type CarouselItems = {
   imageSrc: string;
@@ -30,7 +33,11 @@ const CarouselItems: CarouselItems[] = [
 ];
 export default function AboutCarousel() {
   return (
-    <Carousel className="" opts={{ loop: true }}>
+    <Carousel
+      className=""
+      opts={{ loop: true }}
+      plugins={[Autoplay({ delay: 3000 })]}
+    >
       <CarouselContent>
         {CarouselItems.map((item, index) => {
           return (

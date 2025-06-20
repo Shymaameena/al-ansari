@@ -10,7 +10,7 @@ export default function PillLabel({
   return (
     <p
       className={cn(
-        "text-lg text-primary rounded-3xl bg-[#fae6d9] w-fit px-4 font-medium",
+        "text-lg text-primary rounded-3xl bg-[#fae6d9] w-fit px-4 font-normal py-1",
         className
       )}
     >
