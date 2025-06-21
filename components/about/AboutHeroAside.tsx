@@ -1,11 +1,8 @@
 import PillLabel from "../PillLabel";
 import { Card, CardContent, CardDescription } from "../ui/card";
-import {
-  ArrowRight,
-  ArrowRightCircle,
-  ArrowRightCircleIcon,
-} from "lucide-react";
+import { ArrowRightCircle } from "lucide-react";
 import { Button } from "../ui/button";
+
 export default function AboutHeroAside() {
   return (
     <aside className="">

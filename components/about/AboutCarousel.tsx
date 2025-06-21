@@ -7,8 +7,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { delay } from "framer-motion";
 import Image from "next/image";
+
 type CarouselItems = {
   imageSrc: string;
   imageAlt: string;
