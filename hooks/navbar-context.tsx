@@ -14,7 +14,6 @@ type NavbarContextType = {
   toggleMobileMenu: () => void;
   closeMobileMenu: () => void;
   showTopBar: boolean;
-  isScrolled: boolean;
 };
 
 const NavbarContext = createContext<NavbarContextType | undefined>(undefined);
@@ -22,7 +21,6 @@ const NavbarContext = createContext<NavbarContextType | undefined>(undefined);
 export function NavbarProvider({ children }: { children: ReactNode }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showTopBar, setShowTopBar] = useState(true);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
@@ -32,11 +30,9 @@ export function NavbarProvider({ children }: { children: ReactNode }) {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      setIsScrolled(currentScrollY > 10);
-
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+      if (lastScrollY > 20) {
         setShowTopBar(false);
-      } else if (currentScrollY < lastScrollY || currentScrollY < 10) {
+      } else {
         setShowTopBar(true);
       }
 
@@ -54,7 +50,6 @@ export function NavbarProvider({ children }: { children: ReactNode }) {
         toggleMobileMenu,
         closeMobileMenu,
         showTopBar,
-        isScrolled,
       }}
     >
       {children}

@@ -12,7 +12,7 @@ export default function about() {
         imageSrc="/images/about/Equipmet-rental.jpg"
         title="About Us"
       />
-      <Bounded>
+      <Bounded className="">
         <AboutHero />
         <Ideology />
         <TeamMembers />

@@ -47,7 +47,7 @@ export default function AboutCarousel() {
                 alt={item.imageAlt}
                 width={1920}
                 height={1080}
-                className="object-cover h-[500px]"
+                className="object-cover sm:h-[500px] max-sm:aspect-square"
               />
             </CarouselItem>
           );

@@ -12,8 +12,8 @@ type TMachineryCards = {
 };
 
 export const machineryCards: TMachineryCards[] = [
-    {alt:'',image:EarthMover,href:'',title:'Earth Moving'},
-    {alt:'',image:Lifting,href:'',title:'Lifting Equipment'},
-    {alt:'',image:Power,href:'',title:'Power Equipment'},
-    {alt:'',image:Truck,href:'',title:'Transport Equipment'},
+    {alt:'',image:EarthMover,href:'earth-moving',title:'Earth Moving'},
+    {alt:'',image:Lifting,href:'lifting',title:'Lifting Equipment'},
+    {alt:'',image:Power,href:'power',title:'Power Equipment'},
+    {alt:'',image:Truck,href:'transport',title:'Transport Equipment'},
 ];

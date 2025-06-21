@@ -62,10 +62,10 @@ export default function services() {
           {serviceContent.map((item, index) => {
             return (
               <Card
-                className="w-full rounded-md py-16"
+                className="w-full rounded-md flex flex-col xl:py-16 h-auto"
                 key={`${index}-${item.title}-${item.description}`}
               >
-                <CardContent className="px-14">
+                <CardContent className="xl:px-14">
                   <Image
                     src={item.imageSrc}
                     alt={item.imageAlt}

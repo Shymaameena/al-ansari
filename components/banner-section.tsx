@@ -18,7 +18,7 @@ export default function BannerSection({
   gradientClassName,
 }: IBannerSection) {
   return (
-    <div className="h-max  w-full relative">
+    <div className="h-max w-full relative">
       {imageSrc && !gradient && (
         <div className="absolute w-full h-full left-0 top-0 bg-secondary/70" />
       )}
@@ -33,7 +33,7 @@ export default function BannerSection({
           )}
         />
       )}
-      <div className="absolute w-full h-full flex items-center justify-center text-white text-6xl font-bold">
+      <div className="absolute w-full h-full flex items-center justify-center text-white text-5xl md:text-6xl font-bold text-center">
         {title}
       </div>
       {imageSrc ? (

@@ -6,13 +6,13 @@ import {
   MapPin,
   Phone,
   Mail,
-  ChevronUp,
 } from "lucide-react";
 import Logo from "./logo";
+import BackToTopButton from "./buttons/BackToTop";
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-white py-12 px-6 relative">
+    <footer className="bg-secondary text-white py-12 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Social Media */}
@@ -24,19 +24,22 @@ export default function Footer() {
           </div> */}
             <div className="flex space-x-3">
               <Link
-                href="#"
+                href="https://www.facebook.com/people/Al-Ansari-Transport-Enterprises-WLL/100095544335543/"
+                target="_blank"
                 className="w-10 h-10 border border-gray-400 rounded flex items-center justify-center hover:bg-white hover:text-teal-800 transition-colors"
               >
                 <Facebook size={18} />
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/in/al-ansari-transport-and-enterprises-455b53253/"
+                target="_blank"
                 className="w-10 h-10 border border-gray-400 rounded flex items-center justify-center hover:bg-white hover:text-teal-800 transition-colors"
               >
                 <Linkedin size={18} />
               </Link>
               <Link
-                href="#"
+                href="https://www.instagram.com/al_ansari_transport"
+                target="_blank"
                 className="w-10 h-10 border border-gray-400 rounded flex items-center justify-center hover:bg-white hover:text-teal-800 transition-colors"
               >
                 <Instagram size={18} />
@@ -74,19 +77,19 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <nav className="space-y-2">
               <Link
-                href="#"
+                href="/about"
                 className="block text-gray-300 hover:text-white transition-colors text-sm"
               >
                 {">"} About Us
               </Link>
               <Link
-                href="#"
+                href="/contact"
                 className="block text-gray-300 hover:text-white transition-colors text-sm"
               >
                 {">"} Contact Us
               </Link>
               <Link
-                href="#"
+                href="/services"
                 className="block text-gray-300 hover:text-white transition-colors text-sm"
               >
                 {">"} Our Services
@@ -109,8 +112,9 @@ export default function Footer() {
           {/* Download Brochure */}
           <div className="flex justify-start h-fit lg:justify-end">
             <Link
-              href="#"
-              className="bg-orange-400 hover:bg-orange-500 text-white px-6 py-3 rounded font-medium transition-colors inline-block"
+              href="/doc/ATE-PROFILE.pdf"
+              target="_blank"
+              className="bg-orange-400 hover:bg-orange-500 text-white px-6 py-3 rounded font-medium transition-colors inline-block w-full max-w-[200px]"
             >
               Download Brochure
             </Link>
@@ -130,9 +134,7 @@ export default function Footer() {
       </div>
 
       {/* Scroll to top button */}
-      <button className="absolute bottom-6 right-6 bg-orange-400 hover:bg-orange-500 text-white w-10 h-10 rounded flex items-center justify-center transition-colors">
-        <ChevronUp size={20} />
-      </button>
+      <BackToTopButton/>
     </footer>
   );
 }

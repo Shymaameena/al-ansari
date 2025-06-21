@@ -2,11 +2,12 @@ import Image from "next/image";
 import { Card, CardTitle } from "@/components/ui/card";
 import { machineryCards } from "@/lib/constants/machinery";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function MachineryCards() {
   return (
-    <div className="flex gap-3 md:flex-row flex-col">
-      {machineryCards.map(({ alt, image, title }, index) => {
+    <div className="flex gap-6 md:gap-3 md:flex-row flex-col items-center">
+      {machineryCards.map(({ alt, image, title, href }, index) => {
         return (
           <Card
             key={`${index}`}
@@ -24,12 +25,12 @@ export default function MachineryCards() {
                 className="w-full h-full aspect-square object-contain "
               />
             </div>
-            <div className="flex justify-end px-5">
+            <Link href={href} className="flex justify-end px-5">
               <ArrowRight
                 className="bg-primary rounded-full stroke-[4px] stroke-white p-2"
                 size={40}
               />
-            </div>
+            </Link>
           </Card>
         );
       })}

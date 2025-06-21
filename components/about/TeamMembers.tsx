@@ -40,7 +40,7 @@ export default function TeamMembers() {
       <h2 className="mx-auto heading pt-4 pb-12 max-w-[400px] text-center w-fit">
         Let&apos;s Meet Our Management Team
       </h2>
-      <div className="flex justify-between gap-5">
+      <div className="flex flex-col md:flex-row justify-between gap-5">
         {team.map((item, index) => {
           return (
             <Card
