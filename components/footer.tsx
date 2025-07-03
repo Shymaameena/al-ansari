@@ -53,22 +53,38 @@ export default function Footer() {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-start space-x-2">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <p className="text-sm leading-relaxed">
-                  Office No.2, Floor No.1, Gate No.3,
-                  <br />
-                  Town Centre, Bin Omran, Doha, Qatar,
-                  <br />
-                  P.O BOX:1265
-                </p>
+                <Link
+                  href={
+                    "https://www.google.com/maps/place/AL+ANSARI+TRANSPORT+%26+ENTERPRISES+W.L.L/@25.0781385,51.5284092,17z/data=!3m1!4b1!4m6!3m5!1s0x3e45db3c2ab0bcd5:0x811ea21eb7725684!8m2!3d25.0781386!4d51.5332801!16s%2Fg%2F11dxb7_rb5?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+                  }
+                  target="_blank"
+                >
+                  <p className="text-sm leading-relaxed">
+                    Building No .24, Street No .61, Area 62,
+                    <br />
+                    Logistic Park-A ,Birkat Al Awamer, Doha, Qatar,
+                    <br />
+                    P.O Box 1265
+                  </p>
+                </Link>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone size={16} />
-                <p className="text-sm">+974 44505700</p>
+                <Link className="text-sm" href={`tel:+974 44505700`}>
+                  +974 44505700
+                </Link>
+                <Link className="text-sm" href={`tel:+974 44505800`}>
+                  +974 44505800
+                </Link>
               </div>
-              <div className="flex items-center space-x-2">
+              <Link
+                className="flex items-center space-x-2"
+                href={"mailto:info@ansarigroup.co"}
+                target="_blank"
+              >
                 <Mail size={16} />
                 <p className="text-sm">info@ansarigroup.co</p>
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -134,7 +150,7 @@ export default function Footer() {
       </div>
 
       {/* Scroll to top button */}
-      <BackToTopButton/>
+      <BackToTopButton />
     </footer>
   );
 }
