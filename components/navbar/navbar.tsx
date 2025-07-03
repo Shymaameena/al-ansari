@@ -30,7 +30,9 @@ export default function ResponsiveNavbar() {
       <div className="fixed z-50 w-full">
         <NavBarContentWrapper>
           <div className="flex h-20 items-center justify-between px-4 text-white md:px-8 lg:px-16">
-            <Logo />
+            <Link href={"/"}>
+              <Logo />
+            </Link>
 
             {/* Desktop Navigation */}
             <ul className="hidden  text-[16px] md:flex md:gap-4 lg:gap-8">

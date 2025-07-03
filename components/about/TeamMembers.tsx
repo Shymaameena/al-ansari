@@ -18,7 +18,7 @@ const team: Team[] = [
     imageSrc: "/images/about/team/abu-photo.jpg",
     imageAlt: "",
     name: "Mr. Abu Kombathayil",
-    role: "Director",
+    role: "Founder & Director",
   },
   {
     imageSrc: "/images/about/team/kamal-photo.jpg",
